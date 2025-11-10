@@ -1,2 +1,2 @@
-# trailrunisrael.com
-trailrunisrael.com
+# trailrunisrael
+trailrunisrael
