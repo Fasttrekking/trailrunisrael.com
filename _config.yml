@@ -1,0 +1,38 @@
+# הגדרות בסיסיות
+title: Trail Run Israel
+description: Your guide to trail running and outdoor adventures in Israel
+url: "https://trairunisrael.github.io"
+baseurl: ""
+
+# מחבר
+author:
+  name: Trail Run Israel
+  email: your-email@example.com
+
+# תבנית
+theme: minima
+
+# פרמלינק
+permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 6
+paginate_path: "/page:num/"
+
+# הגדרות נוספות
+timezone: Asia/Jerusalem
+lang: he
+
+# Social
+social:
+  - title: instagram
+    url: https://instagram.com/trairunisrael
+  - title: facebook  
+    url: https://facebook.com/trairunisrael
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
