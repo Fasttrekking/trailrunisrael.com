@@ -10,7 +10,7 @@ repository: "Fasttrekking/trailrunisrael"
 
 # תבנית
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default" # נשנה את זה אחר כך לסגנון מותאם
+minimal_mistakes_skin: "dirt" # נשנה את זה אחר כך לסגנון מותאם
 
 # הגדרות מחבר
 author:
@@ -70,3 +70,8 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# Custom CSS
+sass:
+  sass_dir: _sass
+  style: compressed

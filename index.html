@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8"> <!-- קידוד UTF-8 לתמיכה בעברית -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- רספונסיביות -->
+  <title>TrailRunIsrael - מועדון ריצת שבילים</title>
+
+  <!-- קובץ CSS גלובלי -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Tailwind (CDN) לשימוש במחלקות שימושיות מהירות -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations (נכלל כאן; הקובץ נטען מה-CDN בזמן ריצה) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome לאייקונים -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">🏃‍♀️ TrailRunIsrael</div>
+    <nav>
+      <a href="index.html">בית</a>
+      <a href="about.html">אודות</a>
+      <a href="#contact">צור קשר</a>
+      <!-- כפתור למעבר ידני בין מצבי בהיר/כהה -->
+      <button id="theme-toggle" aria-label="החלף מצב תצוגה" title="החלף מצב תצוגה">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="img" aria-label="תמונת כותרת">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>ריצות שבילים. נופים. קהילה.</h1>
+      <p>הצטרפו אלינו לטיולים ואימוני ריצה בשבילים היפים של ישראל.</p>
+      <a href="#contact" class="btn">להצטרפות</a>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content">
+    <h2 data-aos="fade-up">למה TrailRunIsrael?</h2>
+    <div class="features">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-mountain"></i>
+        <h3>מסלולים מגוונים</h3>
+        <p>טבע, אתגר ונופים בכל סיבוב.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-users"></i>
+        <h3>קהילה תומכת</h3>
+        <p>אנשים שאוהבים לרוץ יחד, ללמוד ולצחוק.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-heartbeat"></i>
+        <h3>בריאות ואנרגיה</h3>
+        <p>שיפור הכושר וההרגשה הכללית באמצעות תנועה בטבע.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (Formspree integration -- placeholder endpoint) -->
+  <section id="contact" class="contact">
+    <h2 data-aos="fade-up">צור קשר</h2>
+
+    <!--
+      טופס יוצג באופן פעיל לאחר שתכניסי את endpoint של Formspree.
+      במקום action יש להכניס את ה-URL ש-Formspree נותנים לך (לדוגמה https://formspree.io/f/xxxxx).
+      הוראות מלאות בתיקיית README.
+      לא הוספנו כאן את כתובת המייל שהעברת כדי לא לחשוף אותה בקוד.
+    -->
+    <form id="contact-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="email" name="email" placeholder="אימייל" required>
+      <textarea name="message" placeholder="הודעה" required></textarea>
+      <button type="submit" class="btn">שלח</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 TrailRunIsrael | נבנה באהבה</p>
+  </footer>
+
+  <!-- ספריות JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // אתחול AOS (אנימציות) לאחר טעינת העמוד
+    if (window.AOS) {
+      AOS.init({ duration: 700, once: true });
+    }
+  </script>
+</body>
+</html>

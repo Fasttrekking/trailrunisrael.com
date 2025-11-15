@@ -1,0 +1,152 @@
+/* TrailRunIsrael - style.css
+   הערות בכל חלק בעברית להסבר על התפקיד של כל בלוק
+*/
+
+/* --- Auto-switch לפי העדפת מערכת (prefers-color-scheme) --- */
+/* ערכי צבעים משתנים לפי מצב בהיר/כהה */
+:root{
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --accent: #22c55e;
+  --header-bg: #0f172a;
+  --card-bg: #ffffff;
+}
+
+/* אם המשתמש במצב כהה במערכת - מחליפים ערכים */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg-color: #0f172a;
+    --text-color: #f9fafb;
+    --accent: #22c55e;
+    --header-bg: #1e293b;
+    --card-bg: #1e293b;
+  }
+}
+
+/* מעבר חלק בין מצבים ליצירת אפקט נקי */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Heebo", sans-serif;
+  margin: 0;
+  transition: background 0.35s ease, color 0.35s ease;
+  direction: rtl; /* מבטיח RTL בכל הדף */
+}
+
+/* כותרת עליונה - sticky לשמירה בראש המסך */
+.header{
+  background: var(--header-bg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header .logo{
+  font-weight: 700;
+}
+.header nav a{
+  color: white;
+  margin: 0 0.6rem;
+  text-decoration: none;
+}
+.header nav a:hover{ text-decoration: underline; }
+
+/* כפתור המצב (theme toggle) */
+#theme-toggle, #theme-toggle-about{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+/* HERO - תמונת רקע עם overlay לשיפור קריאות הטקסט */
+.hero{
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 7rem 1.5rem;
+}
+.hero-content{
+  background: rgba(0,0,0,0.45); /* overlay שחור חצי שקוף */
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+}
+
+/* כפתורים עיקריים */
+.btn{
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.6rem;
+}
+.btn:hover{ opacity: 0.95; }
+
+/* תצוגת כרטיסים ליתרונות */
+.features{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.card{
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 260px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+  text-align: center;
+}
+.card i{ font-size: 2.25rem; color: var(--accent); margin-bottom: 0.6rem; }
+
+/* צור קשר - שדות מותאמים ורספונסיביים */
+.contact{
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.contact input, .contact textarea{
+  width: 85%;
+  max-width: 460px;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-color);
+}
+
+/* FOOTER */
+footer{
+  background: var(--header-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* מצב כהה ידני כאשר מוסיפים class 'dark' לגוף הדף */
+body.dark{
+  /* שינוי משתני צבע כאשר משתמש בחר ידנית מצב כהה */
+  --bg-color: #0f172a;
+  --text-color: #f9fafb;
+  --accent: #22c55e;
+  --header-bg: #1e293b;
+  --card-bg: #1e293b;
+}
+
+/* רספונסיביות לנייד */
+@media (max-width: 768px){
+  .header{ flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; }
+  .hero{ padding: 4.5rem 1rem; }
+  .features{ flex-direction: column; align-items: center; }
+  .contact input, .contact textarea{ width: 95%; }
+}
