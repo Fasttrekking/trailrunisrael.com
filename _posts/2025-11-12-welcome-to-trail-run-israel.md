@@ -10,7 +10,7 @@ tags:
   - outdoors
   - israel
 header:
-  overlay_image: /assets/images/hero-trail.jpg
+  overlay_image: /assets/images/IMG_8943.JPEG
   overlay_filter: 0.5
   caption: "Photo credit: **Unsplash**"
 excerpt: "Join us on an adventure through Israel's most beautiful trails"
